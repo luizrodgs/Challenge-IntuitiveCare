@@ -14,7 +14,8 @@ def download_file(url, file_address):
 
 
 def zip_files():
-    make_archive('files', 'zip', 'Output')
+    make_archive('Files-Challenge01', 'zip', 'Output')
+    print('Zip completed')
 
 
 url_file1 = 'https://www.gov.br/ans/pt-br/arquivos/assuntos/consumidor/o-que-seu-plano-deve-cobrir/Anexo_I_Rol_2021RN_465.2021_RN473_RN478_RN480_RN513_RN536_RN537.pdf'
