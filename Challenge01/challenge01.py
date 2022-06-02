@@ -1,6 +1,5 @@
 import os
 import requests
-import zipfile
 from shutil import make_archive
 
 
