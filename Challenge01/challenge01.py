@@ -2,7 +2,6 @@ import os
 import requests
 from shutil import make_archive
 
-
 def main(url_list, c, output_dir, download_file, zip_files):
     for url in url_list:
         c += 1
