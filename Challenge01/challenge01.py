@@ -14,6 +14,7 @@ def main(url_list, c, output_dir, download_file, zip_files):
             download_file(url, file_name)
     zip_files()
 
+
 # Faz o download do doc referenciado
 def download_file(url, file_address):
     response = requests.get(url)
