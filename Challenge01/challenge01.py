@@ -9,10 +9,10 @@ from bs4 import BeautifulSoup
 def main():
     for c, url in enumerate(url_list):
         if url.endswith(".pdf"):
-            file_name = os.path.join(output_dir, "anexo{}.pdf".format(c + 1))
+            file_name = os.path.join(output_dir, f"anexo{c+1}.pdf")
             download_file(url, file_name)
         elif url.endswith(".xlsx"):
-            file_name = os.path.join(output_dir, "anexo{}.xlsx".format(c + 1))
+            file_name = os.path.join(output_dir, f"anexo{c+1}.xlsx")
             download_file(url, file_name)
     zip_files()
 
@@ -23,7 +23,7 @@ def download_file(url, file_address):
     if response.status_code == requests.codes.OK:
         with open(file_address, "wb") as new_file:
             new_file.write(response.content)
-        print("Download completed. File saved: {}".format(file_address))
+        print(f"Download completed. File saved: {file_address}")
     else:
         response.raise_for_status()
 
@@ -35,6 +35,7 @@ def zip_files():
 
 
 def collect_urls():
+    """Coleta as URLs de cada anexo"""
     base_response = requests.get(
         "https://www.gov.br/ans/pt-br/assuntos/consumidor/o-que-o-seu-plano-de-saude-deve-cobrir-1/o-que-e-o-rol-de-procedimentos-e-evento-em-saude"
     )
