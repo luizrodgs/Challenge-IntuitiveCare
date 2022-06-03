@@ -20,8 +20,6 @@ def exec02():
 
 def zip_files():
     """Zipa a pasta Output2 com os docs baixados"""
-    if not os.path.isdir("Output2"):
-        os.mkdir("Output2")
     make_archive("File-Challenge02", "zip", "Output2")
     print("Zip completed")
 
