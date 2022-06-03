@@ -6,13 +6,14 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def main():
+def exec01():
+    url_list = collect_urls()
     for c, url in enumerate(url_list):
         if url.endswith(".pdf"):
-            file_name = os.path.join(output_dir, f"anexo{c+1}.pdf")
+            file_name = os.path.join("Output", f"anexo{c+1}.pdf")
             download_file(url, file_name)
         elif url.endswith(".xlsx"):
-            file_name = os.path.join(output_dir, f"anexo{c+1}.xlsx")
+            file_name = os.path.join("Output", f"anexo{c+1}.xlsx")
             download_file(url, file_name)
     zip_files()
 
@@ -20,6 +21,8 @@ def main():
 def download_file(url, file_address):
     """Faz o download do doc referenciado"""
     response = requests.get(url)
+    if not os.path.isdir("Output"):
+        os.mkdir("Output")
     if response.status_code == requests.codes.OK:
         with open(file_address, "wb") as new_file:
             new_file.write(response.content)
@@ -48,6 +51,4 @@ def collect_urls():
 
 
 if __name__ == "__main__":
-    output_dir = "Output"
-    url_list = collect_urls()
-    main()
+    exec01()

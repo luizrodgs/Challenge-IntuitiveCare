@@ -1,10 +1,13 @@
+import os
 from shutil import make_archive
 
 import pandas as pd
 import pdfplumber
 
 
-def main():
+def exec02():
+    if not os.path.isdir("Output2"):
+        os.mkdir("Output2")
     with pdfplumber.open("Output/anexo1.pdf") as pdf:
         frames = []
         for page in pdf.pages:
@@ -22,4 +25,4 @@ def zip_files():
 
 
 if __name__ == "__main__":
-    main()
+    exec02()
