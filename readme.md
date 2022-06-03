@@ -27,7 +27,7 @@
     - Criar coleção no Postman para exibir resultado.
   
 #### Requirements
--beautifulsoup4==4.11.1
+- beautifulsoup4==4.11.1
 - pandas==1.4.2
 - pdfplumber==0.7.1
 - requests==2.27.1
