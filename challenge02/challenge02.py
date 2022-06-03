@@ -20,7 +20,7 @@ def exec02():
 
 def zip_files():
     """Zipa a pasta Output2 com os docs baixados"""
-    make_archive("File-Challenge02", "zip", "Output2")
+    make_archive("Teste2_LuizRodrigues", "zip", "Output2")
     print("Zip completed")
 
 
