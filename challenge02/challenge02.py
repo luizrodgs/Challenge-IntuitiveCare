@@ -1,10 +1,11 @@
+import os
 from shutil import make_archive
 
 import pandas as pd
 import pdfplumber
 
 
-def main():
+def exec02():
     with pdfplumber.open("Output/anexo1.pdf") as pdf:
         frames = []
         for page in pdf.pages:
@@ -17,9 +18,11 @@ def main():
 
 def zip_files():
     """Zipa a pasta Output2 com os docs baixados"""
+    if not os.path.isdir("Output2"):
+        os.mkdir("Output2")
     make_archive("File-Challenge02", "zip", "Output2")
     print("Zip completed")
 
 
 if __name__ == "__main__":
-    main()
+    exec02()
