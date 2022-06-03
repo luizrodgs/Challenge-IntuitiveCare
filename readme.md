@@ -12,28 +12,8 @@
   - Zipar o CSV em um arquivo 'Teste_{nome}.zip';
   - Substituir dados abreviados das colunas OD e AMB por Seg. Odontológica e Seg Ambulatorial, respectivamente.
   
-##### - 3: **Banco de Dados**
-  - Baixar os arquivos dos últimos 2 anos no [repositório público](http://ftp.dadosabertos.ans.gov.br/FTP/PDA/demonstracoes_contabeis/);
-  - Criar scripts SQL utilizando MySQL 8 ou Postgres>10.0 que executem as seguintes tarefas:
-    - Criar queries para criar tabelas com as colunas necessárias para o arquivo csv;
-    - Criar queries para carregar o conteúdo do arquivo obtido na tarefa de preparação;
-    - Montar uma query analítica que traga a resposta para as seguintes perguntas:
-      - Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?
-      - Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último ano?
-      
-##### - 4: **API**
-  - Criar uma interface web (usando o framework Vue.js) que se comunicará com um servidor para realizar as tarefas de código abaixo:
-    - Criar servidor com rota que realiza uma busca textual na lista de cadastro de operadoras (obtido na tarefa de preparação) e retorne as linhas que mais se assemelham;
-    - Criar coleção no Postman para exibir resultado.
-  
 #### Requirements
-- autopep8==1.6.0
 - beautifulsoup4==4.11.1
-- certifi==2022.5.18.1
-- charset-normalizer==2.0.12
-- idna==3.3
-- pycodestyle==2.8.0
+- pandas==1.4.2
+- pdfplumber==0.7.1
 - requests==2.27.1
-- soupsieve==2.3.2.post1
-- toml==0.10.2
-- urllib3==1.26.9
