@@ -17,3 +17,8 @@
 - pandas==1.4.2
 - pdfplumber==0.7.1
 - requests==2.27.1
+
+#### Como rodar
+  1) Baixe os arquivos do projeto
+  2) Instale as dependências no projeto no seu ambiente utilizando o comando "pip install -r requirements.txt
+  3) Execute o arquivo "main.py"
