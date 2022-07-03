@@ -20,5 +20,5 @@
 
 #### Como rodar
   1) Baixe os arquivos do projeto
-  2) Instale as dependências no projeto no seu ambiente utilizando o comando "pip install -r requirements.txt
+  2) Instale as dependências no projeto no seu ambiente utilizando o comando "pip install -r requirements.txt"
   3) Execute o arquivo "main.py"
